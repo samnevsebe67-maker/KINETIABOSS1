@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KINETIA — Digital Growth Agency | Системный рост бизнеса</title>
+<meta name="description" content="KINETIA помогает малому и среднему бизнесу расти: разработка сайтов, CRM, автоматизация, лидогенерация и настройка рекламы.">
+<meta property="og:title" content="KINETIA — Digital Growth Agency">
+<meta property="og:description" content="Системный рост бизнеса: сайты, CRM, автоматизация, лидогенерация, реклама.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23050807'/%3E%3Cpath d='M9 7v18M9 17l11-10M12 15l9 10' stroke='%2332D6A0' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050807;--bg2:#0A100E;--em1:#063D30;--em2:#087A58;--em3:#32D6A0;--fg:#F4F7F5;--mut:#929D97;--line:rgba(244,247,245,.1);--safe-t:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--fg);font:400 17px/1.6 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--em3);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1180px,100% - 40px);margin:auto}
+section{padding:clamp(80px,12vw,150px) 0;position:relative}
+h1,h2,h3{font-weight:800;letter-spacing:-.03em;line-height:1.05}
+h2{font-size:clamp(32px,5vw,60px);max-width:18ch}
+.lead{color:var(--mut);max-width:56ch;margin-top:22px;font-size:clamp(16px,1.6vw,19px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:999px;font-weight:700;border:1px solid var(--line);cursor:pointer;background:transparent;transition:.3s}
+.btn.pri{background:linear-gradient(135deg,var(--em2),var(--em3));color:#03130e;border:0;box-shadow:0 0 40px rgba(50,214,160,.25)}
+.btn.pri:hover{box-shadow:0 0 60px rgba(50,214,160,.5);transform:translateY(-2px)}
+.btn.sec:hover{border-color:var(--em3);background:rgba(50,214,160,.08)}
+/* header */
+header{position:fixed;inset:0 0 auto;z-index:50;padding-top:var(--safe-t);transition:.4s}
+header.sc{background:rgba(5,8,7,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.14em;font-size:18px}
+.nav ul{display:flex;gap:34px;list-style:none;color:var(--mut);font-size:15px}.nav ul a:hover{color:var(--fg)}
+.nav .btn{padding:10px 20px;font-size:15px}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger i{display:block;width:22px;height:2px;background:var(--fg);margin:6px auto;transition:.3s}
+.menu{display:none}
+@media(max-width:860px){.nav ul,.nav>.btn{display:none}.burger{display:block}
+.menu{position:fixed;inset:0;background:rgba(5,8,7,.97);z-index:40;flex-direction:column;justify-content:center;align-items:center;gap:26px;font-size:28px;font-weight:800;opacity:0;pointer-events:none;transition:.35s;display:flex}
+.menu.open{opacity:1;pointer-events:auto}header{z-index:60}}
+/* hero */
+#hero{min-height:100svh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+#aurora{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+#hero:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(5,8,7,.78),rgba(5,8,7,.15) 70%),linear-gradient(0deg,var(--bg),transparent 30%)}
+#hero .wrap{position:relative;z-index:2}
+.eyebrow{color:var(--em3);font-size:13px;font-weight:700;letter-spacing:.28em;margin-bottom:26px}
+h1{font-size:clamp(44px,8.2vw,112px);max-width:11ch}
+.ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:38px}
+.under{margin-top:26px;color:var(--mut);font-size:15px}
+.tag{margin-top:56px;font-weight:300;font-size:clamp(18px,2.4vw,26px);color:var(--fg);min-height:1.5em}
+.tag b{color:var(--em3);font-weight:500}.cur{display:inline-block;width:2px;height:1em;background:var(--em3);margin-left:4px;vertical-align:-.12em;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+/* problems */
+.probs{display:grid;grid-template-columns:1fr;margin-top:60px;border-top:1px solid var(--line)}
+.prob{display:grid;grid-template-columns:90px 1fr;gap:20px;padding:34px 0;border-bottom:1px solid var(--line);font-size:clamp(20px,2.6vw,30px);font-weight:500;letter-spacing:-.01em}
+.prob span{color:var(--em3);font-weight:300}
+.solve{margin-top:70px;padding:clamp(28px,5vw,56px);border-radius:28px;background:radial-gradient(120% 140% at 0 0,var(--em1),var(--bg2) 70%);border:1px solid rgba(50,214,160,.25)}
+.solve h3{font-size:clamp(26px,4vw,46px);max-width:20ch}
+/* services */
+.svc{display:grid;grid-template-columns:repeat(12,1fr);gap:20px;margin-top:64px}
+.card{position:relative;overflow:hidden;border-radius:26px;padding:34px;background:var(--bg2);border:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;min-height:340px;transition:border-color .4s,transform .4s}
+.card:hover{border-color:rgba(50,214,160,.5);transform:translateY(-4px)}
+.card:nth-child(1){grid-column:span 7}.card:nth-child(2){grid-column:span 5}.card:nth-child(3){grid-column:span 4}.card:nth-child(4){grid-column:span 4}.card:nth-child(5){grid-column:span 4}
+.card .n{color:var(--mut);font-size:14px}.card h3{font-size:clamp(22px,2.4vw,30px);margin:12px 0 14px;letter-spacing:-.02em;line-height:1.15}
+.card p{color:var(--mut);font-size:16px;max-width:46ch}
+.res{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-size:15px;color:var(--fg)}
+.res small{display:block;color:var(--em3);font-weight:700;margin-bottom:4px;font-size:13px}
+.art{position:absolute;right:-20px;top:-20px;width:190px;height:190px;opacity:.9;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.card:hover .art{transform:rotate(8deg) scale(1.1) translate(-6px,6px)}
+.art *{stroke:var(--em3);fill:none;stroke-width:1.5}.art .f{fill:rgba(8,122,88,.35);stroke:none}
+.card:before{content:"";position:absolute;width:300px;height:300px;right:-120px;top:-120px;background:radial-gradient(circle,rgba(8,122,88,.4),transparent 65%);transition:.6s}
+.card:hover:before{transform:scale(1.4)}.card>*{position:relative}.card>.art{position:absolute}
+@media(max-width:900px){.card:nth-child(n){grid-column:span 12;min-height:300px}}
+/* process */
+.steps{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:80px}
+.track{position:absolute;left:0;right:0;top:9px;height:2px;background:var(--line)}
+.track i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--em2),var(--em3));box-shadow:0 0 18px var(--em3);transition:width 1.8s cubic-bezier(.3,.6,.2,1)}
+.steps.go .track i{width:100%}
+.step{position:relative;padding-top:48px}
+.dot{position:absolute;top:0;left:0;width:20px;height:20px;border-radius:50%;background:var(--bg);border:2px solid var(--em2);transition:.5s}
+.steps.go .dot{border-color:var(--em3);background:var(--em3);box-shadow:0 0 20px var(--em3)}
+.steps.go .step:nth-child(3) .dot{transition-delay:.5s}.steps.go .step:nth-child(4) .dot{transition-delay:1s}.steps.go .step:nth-child(5) .dot{transition-delay:1.5s}
+.step b{color:var(--em3);font-weight:300;font-size:14px}.step h3{font-size:24px;margin:8px 0 12px}.step p{color:var(--mut);font-size:16px}
+@media(max-width:800px){.steps{grid-template-columns:1fr}.track{left:9px;right:auto;width:2px;top:0;bottom:0;height:auto}.track i{width:100%!important;height:0;transition:height 1.8s}.steps.go .track i{height:100%}.step{padding:0 0 10px 56px}}
+/* why */
+.why{display:grid;grid-template-columns:repeat(2,1fr);margin-top:60px;border-top:1px solid var(--line)}
+.why div{padding:34px 30px 34px 0;border-bottom:1px solid var(--line)}.why div:nth-child(even){padding-left:30px;border-left:1px solid var(--line)}
+.why b{color:var(--em3);font-weight:300;font-size:14px}.why h3{font-size:22px;margin:8px 0 10px;letter-spacing:-.01em}.why p{color:var(--mut)}
+@media(max-width:700px){.why{grid-template-columns:1fr}.why div:nth-child(even){padding-left:0;border-left:0}}
+/* final */
+#final{min-height:80svh;display:flex;align-items:center;overflow:hidden;text-align:center}
+#aurora2{position:absolute;inset:0;width:100%;height:100%}
+#final:after{content:"";position:absolute;inset:0;background:radial-gradient(60% 60% at 50% 55%,rgba(5,8,7,.8),transparent),linear-gradient(var(--bg),transparent 25%,transparent 75%,var(--bg))}
+#final .wrap{position:relative;z-index:2}#final h2{margin:auto;max-width:17ch;font-size:clamp(34px,6vw,76px)}#final .lead{margin:24px auto 38px}
+/* form */
+form{margin-top:50px;display:grid;grid-template-columns:1fr 1fr;gap:22px;padding:clamp(22px,4vw,46px);border-radius:28px;background:linear-gradient(160deg,rgba(6,61,48,.35),var(--bg2) 55%);border:1px solid var(--line)}
+.fld{display:flex;flex-direction:column;gap:8px}.full{grid-column:1/-1}
+label,legend{font-size:14px;color:var(--mut);font-weight:500}label i{color:var(--em3);font-style:normal}
+input[type=text],textarea{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:14px;padding:14px 16px;transition:.25s}
+input[type=text]:focus,textarea:focus{outline:0;border-color:var(--em3);box-shadow:0 0 0 4px rgba(50,214,160,.12)}
+textarea{min-height:130px;resize:vertical}
+.err input,.err textarea{border-color:#ff7a7a}.msg{color:#ff9a9a;font-size:13px;min-height:0}
+fieldset{border:0;padding:0}.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.chip input{position:absolute;opacity:0}.chip span{display:inline-block;padding:10px 16px;border-radius:999px;border:1px solid var(--line);font-size:15px;color:var(--fg);cursor:pointer;transition:.25s}
+.chip input:checked+span{background:rgba(50,214,160,.14);border-color:var(--em3);color:var(--em3)}
+.chip input:focus-visible+span{outline:2px solid var(--em3);outline-offset:2px}
+.hp{position:absolute;left:-9999px}
+.sub{display:flex;flex-direction:column;gap:14px;align-items:flex-start}.sub small{color:var(--mut);font-size:13px;max-width:60ch}
+.btn[disabled]{opacity:.6;cursor:wait}
+.sp{width:16px;height:16px;border:2px solid #03130e;border-top-color:transparent;border-radius:50%;animation:r .7s linear infinite;display:none}.btn[disabled] .sp{display:block}@keyframes r{to{transform:rotate(360deg)}}
+.banner{display:none;padding:18px 20px;border-radius:14px;font-size:15px}.banner.ok{background:rgba(50,214,160,.12);border:1px solid var(--em3)}.banner.bad{background:rgba(255,122,122,.1);border:1px solid #ff7a7a}.banner.show{display:block}
+.thanks{display:none;text-align:center;padding:60px 20px;grid-column:1/-1}.thanks h3{font-size:clamp(28px,4vw,44px);margin-bottom:14px}.thanks p{color:var(--mut)}
+form.done>:not(.thanks){display:none}form.done .thanks{display:block}
+@media(max-width:700px){form{grid-template-columns:1fr}}
+footer{border-top:1px solid var(--line);padding:60px 0 40px;color:var(--mut);font-size:15px}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}.fgrid ul{list-style:none;display:grid;gap:10px}.fgrid a:hover{color:var(--em3)}
+.copy{margin-top:50px;font-size:13px}.fgrid .logo{color:var(--fg);margin-bottom:12px}
+@media(max-width:700px){.fgrid{grid-template-columns:1fr}}
+/* reveal: single orchestrated moments only */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}.track i{width:100%!important}.dot{background:var(--em3)!important}}
+</style>
+</head>
+<body>
+<header id="hd"><div class="wrap nav">
+<a href="#hero" class="logo" aria-label="KINETIA"><svg width="26" height="26" viewBox="0 0 32 32"><path d="M9 6v20M9 17l12-11M12 15l10 11" stroke="#32D6A0" stroke-width="3" fill="none" stroke-linecap="round"/></svg>KINETIA</a>
+<ul><li><a href="#services">Услуги</a></li><li><a href="#about">О нас</a></li><li><a href="#process">Процесс</a></li><li><a href="#contact">Контакты</a></li></ul>
+<a class="btn pri" href="#form">Обсудить проект</a>
+<button class="burger" id="bg" aria-label="Меню" aria-expanded="false"><i></i><i></i></button>
+</div></header>
+<nav class="menu" id="mn" aria-label="Мобильное меню"><a href="#services">Услуги</a><a href="#about">О нас</a><a href="#process">Процесс</a><a href="#contact">Контакты</a><a class="btn pri" href="#form">Обсудить проект</a></nav>
+
+<main>
+<section id="hero"><canvas id="aurora" aria-hidden="true"></canvas>
+<div class="wrap"><p class="eyebrow">DIGITAL GROWTH AGENCY</p>
+<h1>Помогаем бизнесу расти. Системно.</h1>
+<p class="lead">Создаём сайты, внедряем CRM, автоматизируем процессы и привлекаем клиентов. Объединяем digital-инструменты в единую систему роста вашего бизнеса.</p>
+<div class="ctas"><a class="btn pri" href="#form">Обсудить проект</a><a class="btn sec" href="#services">Наши решения</a></div>
+<p class="under">От первого касания с клиентом до автоматизации продаж.</p>
+<p class="tag" id="tag" aria-label="Less chaos. More momentum."><span id="tt"></span><span class="cur"></span></p></div></section>
+
+<section id="about"><div class="wrap">
+<h2 class="rv">Ваш бизнес заслуживает большего, чем разрозненные инструменты.</h2>
+<p class="lead rv">Сайт отдельно, реклама отдельно, заявки теряются, CRM не настроена, а процессы зависят от ручной работы. Мы помогаем объединить всё это в работающую систему.</p>
+<div class="probs">
+<div class="prob rv"><span>01</span>Нет стабильного потока клиентов.</div>
+<div class="prob rv"><span>02</span>Заявки теряются, продажи не систематизированы.</div>
+<div class="prob rv"><span>03</span>Бизнес тратит время на процессы, которые можно автоматизировать.</div></div>
+<div class="solve rv"><h3>KINETIA объединяет инструменты в единую систему роста.</h3></div>
+</div></section>
+
+<section id="services"><div class="wrap">
+<h2 class="rv">Всё необходимое для роста бизнеса. В одной системе.</h2>
+<p class="lead rv">Подключаем отдельные инструменты или выстраиваем комплексную digital-инфраструктуру под ваши задачи.</p>
+<div class="svc">
+<article class="card"><svg class="art" viewBox="0 0 200 200"><rect class="f" x="40" y="50" width="130" height="90" rx="10"/><rect x="40" y="50" width="130" height="90" rx="10"/><path d="M40 72h130M60 95h50M60 112h80"/><circle cx="55" cy="61" r="3"/></svg><div><span class="n">01</span><h3>Сайты и разработка</h3><p>Создаём сайты и лендинги, которые презентуют ваш бизнес, формируют доверие и превращают посетителей в заявки.</p></div><div class="res"><small>Результат</small>Присутствие в интернете и эффективная точка привлечения клиентов.</div></article>
+<article class="card"><svg class="art" viewBox="0 0 200 200"><path class="f" d="M30 60h140l-45 50v40l-30 15v-55z"/><path d="M30 60h140l-45 50v40l-30 15v-55z"/></svg><div><span class="n">02</span><h3>CRM и управление продажами</h3><p>Внедряем CRM-системы, настраиваем воронки продаж, собираем заявки в одном месте и помогаем контролировать работу с клиентами.</p></div><div class="res"><small>Результат</small>Ни одна заявка не потеряется, а процесс продаж станет прозрачнее.</div></article>
+<article class="card"><svg class="art" viewBox="0 0 200 200"><circle class="f" cx="100" cy="100" r="30"/><circle cx="100" cy="100" r="30"/><path d="M100 55v-15M100 160v-15M55 100H40M160 100h-15M68 68L57 57M143 143l-11-11M132 68l11-11M57 143l11-11"/></svg><div><span class="n">03</span><h3>Автоматизация</h3><p>Автоматизируем повторяющиеся задачи, интегрируем сервисы и сокращаем количество ручной работы.</p></div><div class="res"><small>Результат</small>Меньше рутины, больше времени на развитие бизнеса.</div></article>
+<article class="card"><svg class="art" viewBox="0 0 200 200"><circle cx="100" cy="100" r="20"/><circle cx="100" cy="100" r="42"/><circle cx="100" cy="100" r="64"/><circle class="f" cx="100" cy="100" r="8"/></svg><div><span class="n">04</span><h3>Лидогенерация</h3><p>Разрабатываем систему привлечения потенциальных клиентов через подходящие каналы и инструменты.</p></div><div class="res"><small>Результат</small>Больше целевых обращений от потенциальных покупателей.</div></article>
+<article class="card"><svg class="art" viewBox="0 0 200 200"><path class="f" d="M40 150l35-45 30 25 55-70v90z"/><path d="M40 150l35-45 30 25 55-70M150 60h-22M150 60v22"/></svg><div><span class="n">05</span><h3>Реклама и трафик</h3><p>Настраиваем рекламные кампании, привлекаем целевую аудиторию и оптимизируем рекламные каналы.</p></div><div class="res"><small>Результат</small>Управляемый поток трафика и возможность масштабирования.</div></article>
+</div></div></section>
+
+<section id="process"><div class="wrap">
+<h2 class="rv">От задачи к работающей системе.</h2>
+<div class="steps" id="steps"><div class="track"><i></i></div>
+<div class="step"><span class="dot"></span><b>01</b><h3>Анализ</h3><p>Изучаем ваш бизнес, текущие процессы, цели и точки роста.</p></div>
+<div class="step"><span class="dot"></span><b>02</b><h3>Стратегия</h3><p>Определяем, какие инструменты принесут максимальную пользу и как их объединить.</p></div>
+<div class="step"><span class="dot"></span><b>03</b><h3>Реализация</h3><p>Разрабатываем, внедряем, настраиваем и запускаем необходимые решения.</p></div>
+<div class="step"><span class="dot"></span><b>04</b><h3>Оптимизация</h3><p>Анализируем результаты, улучшаем процессы и помогаем бизнесу масштабироваться.</p></div></div>
+</div></section>
+
+<section id="why"><div class="wrap">
+<h2 class="rv">Не просто услуги. Системный подход к росту.</h2>
+<div class="why">
+<div class="rv"><b>01</b><h3>Комплексность</h3><p>Все ключевые digital-инструменты в одном месте.</p></div>
+<div class="rv"><b>02</b><h3>Индивидуальный подход</h3><p>Не предлагаем лишнего. Подбираем решения под конкретные задачи бизнеса.</p></div>
+<div class="rv"><b>03</b><h3>Прозрачность</h3><p>Понятные этапы, коммуникация и контроль выполнения задач.</p></div>
+<div class="rv"><b>04</b><h3>Ориентация на результат</h3><p>Нас интересует не просто запуск инструментов, а их реальная польза для бизнеса.</p></div></div>
+</div></section>
+
+<section id="final"><canvas id="aurora2" aria-hidden="true"></canvas><div class="wrap">
+<h2 class="rv">У вашего бизнеса есть потенциал. Давайте приведём его в движение.</h2>
+<p class="lead rv">Расскажите, на каком этапе находится ваш бизнес и чего хотите достичь. Мы поможем определить, какие digital-инструменты действительно нужны для следующего шага.</p>
+<a class="btn pri" href="#form">Начать диалог</a></div></section>
+
+<section id="contact"><div class="wrap">
+<h2>Расскажите о своём проекте.</h2>
+<p class="lead">Ответьте на несколько вопросов — мы изучим вашу задачу и свяжемся с вами, чтобы обсудить возможные решения.</p>
+<form id="form" novalidate>
+<div class="fld" data-f="name"><label for="name">Ваше имя <i>*</i></label><input type="text" id="name" name="name" autocomplete="name" maxlength="100"><span class="msg"></span></div>
+<div class="fld"><label for="company">Название компании</label><input type="text" id="company" name="company" autocomplete="organization" maxlength="150"></div>
+<div class="fld" data-f="contact"><label for="contact-f">Telegram или номер телефона <i>*</i></label><input type="text" id="contact-f" name="contact" placeholder="@username или +380…" maxlength="120"><span class="msg"></span></div>
+<div class="fld"><label for="site">Сайт компании</label><input type="text" id="site" name="site" inputmode="url" maxlength="200"></div>
+<fieldset class="full"><legend>Направление, которое вас интересует</legend><div class="chips">
+<label class="chip"><input type="checkbox" name="services" value="Разработка сайта"><span>Разработка сайта</span></label>
+<label class="chip"><input type="checkbox" name="services" value="CRM"><span>CRM</span></label>
+<label class="chip"><input type="checkbox" name="services" value="Автоматизация"><span>Автоматизация</span></label>
+<label class="chip"><input type="checkbox" name="services" value="Лидогенерация"><span>Лидогенерация</span></label>
+<label class="chip"><input type="checkbox" name="services" value="Реклама и трафик"><span>Реклама и трафик</span></label>
+<label class="chip"><input type="checkbox" name="services" value="Комплексное продвижение"><span>Комплексное продвижение</span></label>
+<label class="chip"><input type="checkbox" name="services" value="Пока не знаю, нужна консультация"><span>Пока не знаю, нужна консультация</span></label></div></fieldset>
+<fieldset class="full"><legend>Примерный бюджет</legend><div class="chips">
+<label class="chip"><input type="radio" name="budget" value="До $500"><span>До $500</span></label>
+<label class="chip"><input type="radio" name="budget" value="$500–1000"><span>$500–1000</span></label>
+<label class="chip"><input type="radio" name="budget" value="$1000–3000"><span>$1000–3000</span></label>
+<label class="chip"><input type="radio" name="budget" value="$3000+"><span>$3000+</span></label>
+<label class="chip"><input type="radio" name="budget" value="Пока не определился"><span>Пока не определился</span></label></div></fieldset>
+<div class="fld full"><label for="message">Расскажите подробнее о задаче</label><textarea id="message" name="message" maxlength="2000"></textarea></div>
+<input class="hp" type="text" name="website_hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div class="sub full"><div class="banner bad" id="bad" role="alert">Не удалось отправить заявку. Попробуйте ещё раз или напишите нам в Telegram.</div>
+<button class="btn pri" id="send" type="submit"><span class="sp"></span><span id="sl">Отправить заявку</span></button>
+<small>Нажимая кнопку, вы соглашаетесь на обработку предоставленных данных для связи с вами.</small></div>
+<div class="thanks" role="status"><h3>Спасибо за обращение!</h3><p>Ваша заявка успешно отправлена. Команда KINETIA свяжется с вами в ближайшее время.</p></div>
+</form></div></section>
+</main>
+
+<footer><div class="wrap"><div class="fgrid">
+<div><div class="logo">KINETIA</div><p>Digital Growth Agency.<br>Создаём движение. Системно развиваем бизнес.</p></div>
+<ul><li><a href="#services">Услуги</a></li><li><a href="#about">О нас</a></li><li><a href="#process">Процесс</a></li><li><a href="#contact">Контакты</a></li></ul>
+<ul><li><a id="ft" href="#" rel="noopener">Telegram</a></li><li><a id="fe" href="#">Email</a></li></ul></div>
+<p class="copy">© 2026 KINETIA. All rights reserved.</p></div></footer>
+
+<script src="site.config.js"></script>
+<script>
+const $=s=>document.querySelector(s),RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+/* contacts */
+const C=window.KINETIA||{};$('#ft').href=C.telegram||'#';$('#fe').href='mailto:'+(C.email||'');
+/* header + menu */
+addEventListener('scroll',()=>$('#hd').classList.toggle('sc',scrollY>20),{passive:true});
+const mn=$('#mn'),bg=$('#bg');function tog(o){mn.classList.toggle('open',o);bg.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''}
+bg.onclick=()=>tog(!mn.classList.contains('open'));mn.querySelectorAll('a').forEach(a=>a.onclick=()=>tog(false));
+addEventListener('keydown',e=>e.key==='Escape'&&tog(false));
+/* reveal + process */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');if(e.target.id==='steps')e.target.classList.add('go');io.unobserve(e.target)}}),{threshold:.25});
+document.querySelectorAll('.rv,#steps').forEach(el=>io.observe(el));
+/* typed tagline */
+(function(){const t='Less chaos. More momentum.',el=$('#tt');if(RM){el.textContent=t;return}let i=0;(function n(){el.textContent=t.slice(0,++i);if(i<t.length)setTimeout(n,70)})()})();
+/* Aurora: слоистые световые ленты на canvas, облегчённо на мобильных */
+function aurora(cv,{ribbons,dpr,top}){const x=cv.getContext('2d');let W,H,vis=true,t0=performance.now();
+const mob=innerWidth<760,R=ribbons||(mob?3:6),sc=dpr||(mob?.5:.75);
+function rs(){W=cv.width=Math.max(1,cv.clientWidth*sc);H=cv.height=Math.max(1,cv.clientHeight*sc)}rs();addEventListener('resize',rs);
+new IntersectionObserver(e=>vis=e[0].isIntersecting).observe(cv);
+const cols=[[6,61,48],[8,122,88],[50,214,160]];
+function draw(t){x.clearRect(0,0,W,H);x.globalCompositeOperation='lighter';
+for(let r=0;r<R;r++){const c=cols[r%3],ph=r*1.7,base=H*(top+r*.045),amp=H*(.07+.02*(r%3)),sp=.00006+r*.000012,N=48;
+for(let k=0;k<1;k++){const pts=[];for(let i=0;i<=N;i++){const u=i/N,px=u*W,
+y=base+Math.sin(u*3.2+t*sp*9+ph)*amp+Math.sin(u*7.1-t*sp*14+ph*2)*amp*.35;pts.push([px,y])}
+const h=H*(.38+.08*Math.sin(t*sp*6+ph));
+for(let i=0;i<N;i++){const [a,b]=pts[i],[a2,b2]=pts[i+1],u=i/N,al=(.10+.10*Math.sin(u*Math.PI))*(.6+.4*Math.sin(t*sp*8+u*5+ph));
+const g=x.createLinearGradient(0,b,0,b+h);g.addColorStop(0,`rgba(${c[0]},${c[1]},${c[2]},${al})`);g.addColorStop(.35,`rgba(${c[0]},${c[1]},${c[2]},${al*.45})`);g.addColorStop(1,'rgba(0,0,0,0)');
+x.fillStyle=g;x.beginPath();x.moveTo(a,b);x.lineTo(a2+1,b2);x.lineTo(a2+1,b2+h);x.lineTo(a,b+h);x.fill()}}}
+x.globalCompositeOperation='source-over'}
+if(RM){draw(9000);return}
+(function loop(now){if(vis)draw(now-t0+9000);requestAnimationFrame(loop)})(performance.now())}
+cv_a=$('#aurora');aurora(cv_a,{top:.18});aurora($('#aurora2'),{top:.25,ribbons:innerWidth<760?3:5});
+/* form */
+const f=$('#form'),send=$('#send'),bad=$('#bad');
+function setErr(name,m){const w=f.querySelector(`[data-f=${name}]`);w.classList.toggle('err',!!m);w.querySelector('.msg').textContent=m||''}
+f.addEventListener('submit',async e=>{e.preventDefault();if(send.disabled)return;bad.classList.remove('show');
+const fd=new FormData(f),name=(fd.get('name')||'').trim(),ct=(fd.get('contact')||'').trim();let ok=true;
+setErr('name',name.length<2?(ok=false,'Укажите имя'):'');
+setErr('contact',ct.length<5||!(/^@?[A-Za-z0-9_]{5,32}$/.test(ct)||/^\+?[\d\s()\-]{7,}$/.test(ct))?(ok=false,'Укажите Telegram (@username) или номер телефона'):'');
+if(!ok){f.querySelector('.err input').focus();return}
+send.disabled=true;$('#sl').textContent='Отправляем…';
+const body={name,company:fd.get('company'),contact:ct,site:fd.get('site'),message:fd.get('message'),budget:fd.get('budget')||'',services:fd.getAll('services'),website_hp:fd.get('website_hp')};
+try{const r=await fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});const j=await r.json().catch(()=>({}));
+if(!r.ok||!j.ok)throw 0;f.classList.add('done');f.scrollIntoView({block:'center'})}
+catch{bad.classList.add('show');send.disabled=false;$('#sl').textContent='Отправить заявку'}});
+</script>
+</body></html>
